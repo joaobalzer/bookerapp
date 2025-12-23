@@ -6,24 +6,44 @@
   --text:#f0f6fb;
 }
 *{box-sizing:border-box}
-body{margin:0;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;background:linear-gradient(180deg,var(--bg),#021021);color:var(--text)}
-.wrap{max-width:1100px;margin:0 auto;padding:36px}
-.hero{padding:64px 0}
-.hero-inner{display:flex;gap:28px;align-items:center}
-.hero-text{flex:1}
-.hero-visual{flex:1;display:flex;justify-content:center}
-.hero h1{font-size:40px;margin:0 0 10px}
-.lead{opacity:0.95;font-size:18px;margin:0 0 18px}
-.cta-row{display:flex;gap:12px}
-.cta{display:inline-block;padding:10px 18px;background:transparent;color:var(--text);border-radius:8px;text-decoration:none;border:1px solid rgba(255,255,255,0.06)}
+.body,body{margin:0;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;background:linear-gradient(180deg,var(--bg),#021021);color:var(--text);-webkit-font-smoothing:antialiased}
+.wrap{max-width:1150px;margin:0 auto;padding:28px}
+.hero{padding:48px 16px}
+.hero-inner{display:flex;gap:28px;align-items:flex-start;flex-wrap:wrap}
+.hero-text{flex:1;min-width:280px}
+.hero-visual{flex:1;min-width:280px;display:flex;justify-content:center}
+.hero h1{font-size:36px;margin:0 0 8px;letter-spacing:0.2px}
+.lead{opacity:0.95;font-size:16px;margin:0 0 14px}
+.kpi-row{display:flex;gap:12px;margin:10px 0 18px}
+.kpi{background:rgba(255,255,255,0.03);padding:8px 12px;border-radius:10px;text-align:center}
+.kpi-value{font-weight:700;font-size:18px}
+.kpi-label{font-size:12px;opacity:0.8}
+.cta-row{display:flex;gap:12px;margin-bottom:8px}
+.cta{display:inline-block;padding:10px 18px;background:transparent;color:var(--text);border-radius:10px;text-decoration:none;border:1px solid rgba(255,255,255,0.06)}
 .cta.primary{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:white;border:none}
-section{margin:32px 0}
-.features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
-.feature{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:18px;border-radius:10px}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
-.card{background:rgba(255,255,255,0.03);padding:16px;border-radius:10px}
-.mock{width:320px;height:200px;background:linear-gradient(90deg,rgba(255,255,255,0.03),rgba(255,255,255,0.01));border-radius:12px;display:flex;align-items:center;justify-content:center}
+section{margin:28px 0}
+.features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.feature{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:18px;border-radius:12px}
+.kpi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.kpi-card{background:rgba(255,255,255,0.03);padding:18px;border-radius:12px;text-align:left}
+.kpi-card .big{font-size:24px;font-weight:700;margin-top:8px}
+.kpi-card .meta{opacity:0.85;font-size:13px;margin-top:6px}
+.panel-mock{width:100%;max-width:420px;background:linear-gradient(180deg,rgba(255,255,255,0.03),rgba(255,255,255,0.01));border-radius:12px;padding:12px}
+.panel-header{font-weight:700;margin-bottom:8px}
+.panel-body{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.mini-chart{height:80px;background:rgba(255,255,255,0.02);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:12px}
 .signup-form{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
 .signup-form input,.signup-form select{padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:var(--text)}
 .signup-form button{padding:10px 16px;border-radius:8px;border:none}
-footer{padding:24px;text-align:center;opacity:0.75}
+.site-footer{padding:24px 0;background:rgba(0,0,0,0.15);margin-top:36px}
+.site-footer a{color:var(--text);text-decoration:underline}
+.whatsapp-float{position:fixed;right:18px;bottom:18px;background:#25D366;color:white;width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px;text-decoration:none;box-shadow:0 6px 18px rgba(0,0,0,0.25)}
+
+@media (max-width:800px){
+  .hero-inner{flex-direction:column-reverse;align-items:stretch}
+  .hero h1{font-size:28px}
+  .panel-mock{max-width:100%}
+}
+
+/* small helpers */
+.lead small{opacity:0.8}
