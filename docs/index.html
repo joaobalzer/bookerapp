@@ -15,10 +15,16 @@
 
 <header>
     <div class="container nav-container">
-        <a class="logo" href="/"> <svg class="logo-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 40"><rect width="120" height="40" rx="8" fill="#0A2540"/><text x="14" y="26" fill="#fff" font-weight="700" font-family="Montserrat, sans-serif">Booker</text></svg> </a>
-        <nav style="margin-left:auto;display:flex;gap:12px;align-items:center">
+        <div class="nav-left"></div>
+        <div style="margin-left:auto;display:flex;gap:12px;align-items:center">
             <a class="btn" href="#features">Recursos</a>
             <a class="btn btn-whatsapp" href="https://wa.me/5542996413768" target="_blank">WhatsApp</a>
+            <button id="hamburger" aria-label="Menu" class="hamburger">☰</button>
+        </div>
+        <nav id="mobileMenu" class="mobile-menu" aria-hidden="true">
+            <a href="#features">Recursos</a>
+            <a href="#kpis">KPIs</a>
+            <a href="#signup">Beta</a>
         </nav>
     </div>
 </header>
@@ -36,16 +42,19 @@
 
             <div class="grid grid-3">
                 <div class="card">
+                    <div class="icon">🎧</div>
                     <h3>1.2M</h3>
-                    <p>Streams (últimos 30 dias)</p>
+                    <p>Streams (30 dias)</p>
                 </div>
                 <div class="card">
+                    <div class="icon">👥</div>
                     <h3>98K</h3>
-                    <p>Seguidores totais</p>
+                    <p>Seguidores</p>
                 </div>
                 <div class="card">
+                    <div class="icon">📈</div>
                     <h3>4.8%</h3>
-                    <p>Taxa média de engajamento</p>
+                    <p>Engajamento</p>
                 </div>
             </div>
         </div>
@@ -84,12 +93,12 @@
             <div class="grid grid-3" style="margin-top:16px">
                 <div class="card">
                     <h4>Streams (30d)</h4>
-                    <p class="large">1.2M</p>
+                    <canvas id="chartStreams" height="100"></canvas>
                     <p class="muted">+18% vs mês anterior</p>
                 </div>
                 <div class="card">
                     <h4>Vendas de ingressos</h4>
-                    <p class="large">3.4K</p>
+                    <canvas id="chartTickets" height="100"></canvas>
                     <p class="muted">Receita estimada R$ 47.200</p>
                 </div>
                 <div class="card">
@@ -117,13 +126,13 @@
         <div class="container">
             <h2>Entre na Beta</h2>
             <p>Cadastre-se para acesso inicial e integrações prioritárias.</p>
-            <form class="form" onsubmit="alert('Obrigado — vamos te contatar!'); return false;">
-                <input type="email" placeholder="Seu e-mail" required style="padding:12px;border-radius:6px;border:1px solid #e6e9ee;min-width:240px">
-                <select style="padding:12px;border-radius:6px;border:1px solid #e6e9ee">
+            <form class="form" onsubmit="alert('Obrigado — vamos te contatar via WhatsApp!'); return false;">
+                <input type="email" placeholder="Seu e-mail (opcional)" style="padding:12px;border-radius:6px;border:1px solid rgba(255,255,255,0.06);min-width:240px;background:transparent;color:inherit">
+                <select style="padding:12px;border-radius:6px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:inherit">
                     <option>Sou músico</option>
                     <option>Sou contratante / casa</option>
                 </select>
-                <button class="btn" type="submit">Entrar</button>
+                <a class="btn" href="https://wa.me/5542996413768" target="_blank">Quero testar (WhatsApp)</a>
             </form>
         </div>
     </section>
@@ -132,10 +141,26 @@
 
 <footer>
     <div class="container" style="display:flex;justify-content:space-between;align-items:center;padding:2rem 0">
-        <div>© Booker</div>
-        <div><a class="btn btn-whatsapp" href="https://wa.me/5542996413768" target="_blank">Fale com a equipe (WhatsApp)</a></div>
+                <div>© Booker</div>
+                <div><a class="btn btn-whatsapp" href="https://wa.me/5542996413768" target="_blank">Fale com a equipe (WhatsApp)</a></div>
     </div>
 </footer>
+
+<!-- Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    // Hamburger toggle
+    const hb = document.getElementById('hamburger');
+    const menu = document.getElementById('mobileMenu');
+    if(hb){ hb.addEventListener('click', ()=>{ menu.classList.toggle('show'); menu.setAttribute('aria-hidden', menu.classList.contains('show') ? 'false' : 'true'); }); }
+
+    // Mock charts
+    const ctx1 = document.getElementById('chartStreams')?.getContext('2d');
+    if(ctx1){ new Chart(ctx1, { type:'line', data:{ labels:['-29','-24','-19','-14','-9','-4','0'], datasets:[{ label:'Streams', data:[800000,900000,920000,980000,1050000,1120000,1200000], borderColor:'#ff7a59', backgroundColor:'rgba(255,122,89,0.12)', tension:0.3, fill:true }] }, options:{ plugins:{ legend:{ display:false } }, scales:{ x:{ display:false }, y:{ display:false } } } }); }
+
+    const ctx2 = document.getElementById('chartTickets')?.getContext('2d');
+    if(ctx2){ new Chart(ctx2, { type:'bar', data:{ labels:['Curitiba','SP','RJ','BH'], datasets:[{ label:'Ingressos', data:[1200,900,700,500], backgroundColor:['#ff7a59','#ffb86b','#ffd36b','#ff7ab6'] }] }, options:{ plugins:{ legend:{ display:false } }, scales:{ x:{ display:false }, y:{ display:false } } } }); }
+</script>
 
 </body>
 </html>

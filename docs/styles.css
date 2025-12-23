@@ -30,6 +30,27 @@ section { padding:3rem 0 }
 footer { padding:2rem 0; border-top:1px solid rgba(255,255,255,0.03) }
 @media(max-width:767px){ h1{ font-size:1.75rem } .hero{ padding:4rem 0 } }
 
+/* Nav hamburger */
+.hamburger{background:transparent;border:none;color:inherit;font-size:22px;cursor:pointer;padding:8px 10px;border-radius:8px}
+.mobile-menu{position:absolute;right:16px;top:64px;background:linear-gradient(180deg,rgba(255,255,255,0.03),rgba(255,255,255,0.01));padding:12px;border-radius:8px;display:none;flex-direction:column;gap:8px;box-shadow:0 12px 36px rgba(2,6,23,0.6)}
+.mobile-menu a{color:inherit;text-decoration:none;padding:8px;border-radius:6px}
+.mobile-menu.show{display:flex}
+
+/* Icons in cards */
+.icon{font-size:22px;margin-bottom:8px}
+
+/* Section color accents */
+section.hero{ background: linear-gradient(180deg, rgba(124,58,237,0.12), transparent); }
+section#features{ background: linear-gradient(180deg, rgba(255,140,0,0.06), rgba(255,140,0,0.02)); }
+section#kpis{ background: linear-gradient(180deg, rgba(255,69,0,0.04), rgba(124,58,237,0.02)); }
+section#potential{ background: linear-gradient(180deg, rgba(124,58,237,0.03), rgba(0,0,0,0)); }
+
+/* center footer content */
+footer .container{ display:flex; justify-content:center; align-items:center; gap:12px }
+
+/* Chart canvas responsive */
+canvas{ max-width:100%; height:auto }
+
 /* Dark theme base */
 body { background: radial-gradient(1200px 600px at 10% 10%, rgba(124,58,237,0.12), transparent), linear-gradient(180deg,#050617,#071127); color:#E6EEF8 }
 .container { padding:0 1.25rem }
