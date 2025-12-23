@@ -51,6 +51,23 @@ footer .container{ display:flex; justify-content:center; align-items:center; gap
 /* Chart canvas responsive */
 canvas{ max-width:100%; height:auto }
 
+/* Gradient separator between sections */
+section + section::before{
+  content: "";
+  display:block;
+  height:48px;
+  margin-top:-24px;
+  background: linear-gradient(180deg, rgba(0,0,0,0.0), rgba(255,255,255,0.03));
+  pointer-events:none;
+}
+
+/* Collapse grids responsively */
+@media(max-width:767px){
+  .grid-3, .grid-2 { grid-template-columns: 1fr !important; }
+  .card { padding:14px }
+  .mobile-menu{right:8px;top:56px}
+}
+
 /* Dark theme base */
 body { background: radial-gradient(1200px 600px at 10% 10%, rgba(124,58,237,0.12), transparent), linear-gradient(180deg,#050617,#071127); color:#E6EEF8 }
 .container { padding:0 1.25rem }
