@@ -1,124 +1,141 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Booker — Insights para músicos e casas de show</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <a class="whatsapp-float" href="https://wa.me/5542996413768" target="_blank" aria-label="WhatsApp">💬</a>
-    <header class="hero">
-      <div class="wrap hero-inner">
-        <div class="hero-text">
-          <h1>Booker</h1>
-          <p class="lead">Insights em tempo real para músicos, casas e contratantes — descubra onde seu público está, aumente contratações e potencialize shows.</p>
-          <div class="kpi-row">
-            <div class="kpi">
-              <div class="kpi-value">1.2M</div>
-              <div class="kpi-label">Streams (30d)</div>
+    <meta name="description" content="Booker: painel de dados para músicos, contratantes e casas. Agregue Spotify, YouTube, ticketing e redes para descobrir seu público e aumentar receitas.">
+    <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwIiBoZWlnaHQ9IjEyMCI+PHJlY3QgZmlsbD0iI2ZmNjY2NiIgaGVpZ2h0PSIxMjAiIHdpZHRoPSIxMjAiIHJ4PSIyMCIvPjwvc3ZnPg==" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <div class="container nav-container">
+        <a class="logo" href="/"> <svg class="logo-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 40"><rect width="120" height="40" rx="8" fill="#0A2540"/><text x="14" y="26" fill="#fff" font-weight="700" font-family="Montserrat, sans-serif">Booker</text></svg> </a>
+        <nav style="margin-left:auto;display:flex;gap:12px;align-items:center">
+            <a class="btn" href="#features">Recursos</a>
+            <a class="btn btn-whatsapp" href="https://wa.me/5542996413768" target="_blank">WhatsApp</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>Insights que colocam sua música nos palcos certos</h1>
+            <p class="hero-subtitle">Booker agrega dados de Spotify, YouTube, ticketing e redes sociais para músicos, contratantes e casas. Descubra onde estão seus fãs, otimize turnês e monetize melhor cada show.</p>
+
+            <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-bottom:24px">
+                <a class="btn" href="#signup">Entrar na Beta</a>
+                <a class="btn" href="#kpis">Ver KPIs</a>
             </div>
-            <div class="kpi">
-              <div class="kpi-value">98K</div>
-              <div class="kpi-label">Seguidores</div>
+
+            <div class="grid grid-3">
+                <div class="card">
+                    <h3>1.2M</h3>
+                    <p>Streams (últimos 30 dias)</p>
+                </div>
+                <div class="card">
+                    <h3>98K</h3>
+                    <p>Seguidores totais</p>
+                </div>
+                <div class="card">
+                    <h3>4.8%</h3>
+                    <p>Taxa média de engajamento</p>
+                </div>
             </div>
-            <div class="kpi">
-              <div class="kpi-value">4.8%</div>
-              <div class="kpi-label">Engajamento</div>
+        </div>
+    </section>
+
+    <section id="features" class="bg-alt">
+        <div class="container">
+            <h2>O que o Booker oferece</h2>
+            <div class="grid grid-2">
+                <div class="card">
+                    <h3>Agregação multi-plataforma</h3>
+                    <p>Combine plays, views, seguidores e vendas em um painel único com histórico e segmentação por cidade, idade e plataforma.</p>
+                </div>
+                <div class="card">
+                    <h3>Perfis para cada público</h3>
+                    <p>Músicos recebem recomendações de setlist e mercados; contratantes filtram bandas por público e potencial de venda.</p>
+                </div>
             </div>
-          </div>
-          <div class="cta-row">
-            <a class="cta primary" href="#signup">Testar grátis</a>
-            <a class="cta" href="#features">Ver recursos</a>
-          </div>
-          <p class="contact">Contato: <a href="mailto:joaobalzer@gmail.com">joaobalzer@gmail.com</a></p>
-        </div>
-        <div class="hero-visual">
-          <div class="panel-mock">
-            <div class="panel-header">Painel do Booker</div>
-            <div class="panel-body">
-              <div class="mini-chart">Streams trend</div>
-              <div class="mini-chart">Top cidades</div>
+
+            <div class="grid grid-2" style="margin-top:24px">
+                <div class="card">
+                    <h3>Insights para casas</h3>
+                    <p>Conecte dados da casa com os artistas para entender performance por evento e otimizar escalações e preço de ingresso.</p>
+                </div>
+                <div class="card">
+                    <h3>Alertas e recomendações</h3>
+                    <p>Receba notificações quando uma música ou mercado entrar em alta — ações práticas para aumentar vendas e presença.</p>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
-    </header>
+    </section>
 
-    <main class="wrap">
-      <section id="features">
-        <h2>O que entregamos</h2>
-        <div class="features-grid">
-          <article class="feature">
-            <h3>Agregação multi-plataforma</h3>
-            <p>Spotify, YouTube, Apple Music, ticketing e redes sociais reunidos num único painel com históricos e filtros por região.</p>
-          </article>
-          <article class="feature">
-            <h3>Perfis para músicos e contratantes</h3>
-            <p>Músicos veem KPIs e sugestões de setlist; contratantes filtram por público, cidade e potencial de venda.</p>
-          </article>
-          <article class="feature">
-            <h3>Insights para casas</h3>
-            <p>Entenda performance por evento, otimização de line-up e métricas de retorno por público.</p>
-          </article>
-          <article class="feature">
-            <h3>Alertas e recomendações</h3>
-            <p>Receba alertas quando uma música disparar ou quando um mercado emergente aparecer — recomendações acionáveis para turnês.</p>
-          </article>
+    <section id="kpis">
+        <div class="container">
+            <h2>KPIs — exemplo interativo</h2>
+            <div class="grid grid-3" style="margin-top:16px">
+                <div class="card">
+                    <h4>Streams (30d)</h4>
+                    <p class="large">1.2M</p>
+                    <p class="muted">+18% vs mês anterior</p>
+                </div>
+                <div class="card">
+                    <h4>Vendas de ingressos</h4>
+                    <p class="large">3.4K</p>
+                    <p class="muted">Receita estimada R$ 47.200</p>
+                </div>
+                <div class="card">
+                    <h4>Top cidades</h4>
+                    <p class="large">Curitiba · São Paulo · Rio de Janeiro</p>
+                    <p class="muted">Heatmap e segmentação por bairro</p>
+                </div>
+            </div>
         </div>
-      </section>
+    </section>
 
-      <section id="kpis">
-        <h2>KPIs — exemplo real</h2>
-        <div class="kpi-grid">
-          <div class="kpi-card">
-            <h4>Streams (últimos 30 dias)</h4>
-            <div class="big">1.2M</div>
-            <div class="meta">+18% vs mês anterior</div>
-          </div>
-          <div class="kpi-card">
-            <h4>Vendas de ingressos</h4>
-            <div class="big">3.4K</div>
-            <div class="meta">Receita estimada R$ 47.200</div>
-          </div>
-          <div class="kpi-card">
-            <h4>Top cidades</h4>
-            <div class="big">Curitiba, SP, RJ</div>
-            <div class="meta">Mapa e heatmap disponíveis no painel</div>
-          </div>
+    <section id="potential">
+        <div class="container">
+            <h2>Potencial</h2>
+            <p>Booker funciona como Songstats + analytics para shows: integra consumo digital com presença ao vivo para tomar decisões melhores sobre turnês e negociações.</p>
+            <ul>
+                <li>Planejamento de turnês baseado em dados reais.</li>
+                <li>Negociação de cachês com métricas verificáveis.</li>
+                <li>Otimização de bilheteria e line-ups para casas.</li>
+            </ul>
         </div>
-      </section>
+    </section>
 
-      <section id="potential">
-        <h2>Potencial — por que investir</h2>
-        <p>Semelhante ao Songstats, o Booker conecta dados de consumo (streams, views), comportamento (engajamento) e presença ao vivo (vendas/ticketing). Isso permite:</p>
-        <ul>
-          <li>Decidir cidades para turnê com base em dados reais.</li>
-          <li>Negociar cachês com métricas de audiência comprovadas.</li>
-          <li>Otimizar escalação de casas e aumentar taxa de ocupação.</li>
-        </ul>
-      </section>
+    <section id="signup" class="bg-alt">
+        <div class="container">
+            <h2>Entre na Beta</h2>
+            <p>Cadastre-se para acesso inicial e integrações prioritárias.</p>
+            <form class="form" onsubmit="alert('Obrigado — vamos te contatar!'); return false;">
+                <input type="email" placeholder="Seu e-mail" required style="padding:12px;border-radius:6px;border:1px solid #e6e9ee;min-width:240px">
+                <select style="padding:12px;border-radius:6px;border:1px solid #e6e9ee">
+                    <option>Sou músico</option>
+                    <option>Sou contratante / casa</option>
+                </select>
+                <button class="btn" type="submit">Entrar</button>
+            </form>
+        </div>
+    </section>
 
-      <section id="signup">
-        <h2>Quer testar?</h2>
-        <p>Entre na lista Beta — respondemos em até 48h.</p>
-        <form class="signup-form" action="#" onsubmit="alert('Obrigado! Entraremos em contato.'); return false;">
-          <input type="email" placeholder="Seu e-mail" required />
-          <select aria-label="Tipo de usuário">
-            <option>Sou músico</option>
-            <option>Sou contratante / casa</option>
-          </select>
-          <button class="cta primary" type="submit">Entrar na Beta</button>
-        </form>
-      </section>
-    </main>
+</main>
 
-    <footer class="site-footer">
-      <div class="wrap">
-        <div>© Booker — contato: <a href="mailto:joaobalzer@gmail.com">joaobalzer@gmail.com</a></div>
-        <div>WhatsApp: <a href="https://wa.me/5542996413768">+55 42 99641-3768</a></div>
-      </div>
-    </footer>
+<footer>
+    <div class="container" style="display:flex;justify-content:space-between;align-items:center;padding:2rem 0">
+        <div>© Booker — <a href="mailto:joaobalzer@gmail.com">joaobalzer@gmail.com</a></div>
+        <div><a class="btn btn-whatsapp" href="https://wa.me/5542996413768" target="_blank">WhatsApp</a></div>
+    </div>
+</footer>
 
-  </body>
+</body>
 </html>
